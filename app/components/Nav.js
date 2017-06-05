@@ -12,10 +12,18 @@ export default class Nav extends Component {
 		return (
 			<div className="nav-container">
 				<nav className="nav nav-pills flex-column flex-md-row justify-content-center">
-				  <IndexLink className="flex-sm-fill text-sm-center nav-link title disabled" href="#">Timer App build on ReactJs</IndexLink>
-				  <IndexLink className="flex-sm-fill text-sm-center nav-link countdown" href="#">CountDown</IndexLink>
-				  <IndexLink className="flex-sm-fill text-sm-center nav-link timer" href="#">Timer</IndexLink>
-				  <IndexLink className="flex-sm-fill text-sm-center nav-link author" href="#">Seb made.this</IndexLink>
+				<li className="nav-item">
+				  <IndexLink className="flex-sm-fill text-sm-center nav-link title disabled" to="/">Timer App build on ReactJs</IndexLink>
+				</li>
+				  <li className="nav-item">
+				  <IndexLink className="flex-sm-fill text-sm-center nav-link counter" to="/Counter">Counter</IndexLink>
+				  </li>
+				  <li className="nav-item">
+				  <IndexLink className="flex-sm-fill text-sm-center nav-link timer" to="/Timer">Timer</IndexLink>
+				  </li>
+				  <li className="nav-item">
+				  <IndexLink className="flex-sm-fill text-sm-center nav-link author" to="/">Seb made.this</IndexLink>
+				  </li>
 				</nav>
 			</div>
 		)

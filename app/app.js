@@ -13,8 +13,8 @@ import  './app.scss'
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main} >
-			<Route path="/Counter" component={Counter} />
-			<Route path="/Timer" component={Timer} />
+			<Route path="Counter" component={Counter} />
+			<Route path="Timer" component={Timer} />
 			<IndexRoute></IndexRoute>
 		</Route>		
 	</Router>,

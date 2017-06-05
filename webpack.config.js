@@ -11,6 +11,10 @@ module.exports = {
   },
   resolve: {
     alias: {
+      Main: 'app/components/Main.js',
+      Nav: 'app/components/Nav.js',
+      Timer: 'app/components/Timer.js',
+      Counter: 'app/components/Counter.js',
     }
   },
   module: {
