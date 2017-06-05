@@ -9,12 +9,15 @@ module.exports = {
     path: path.resolve( __dirname, 'public'),
     filename: 'bundle.js',
   },
-  resolve: {
+  resolve: { 
+    // root: [path.resolve(__dirname, 'app'), path.resolve(__dirname, 'node_modules')],
+    // extensions: ['', '.js', 'jsx'],
     alias: {
       Main: 'app/components/Main.js',
       Nav: 'app/components/Nav.js',
       Timer: 'app/components/Timer.js',
       Counter: 'app/components/Counter.js',
+      Clock: 'app/components/Clock.js',
     }
   },
   module: {
@@ -33,6 +36,6 @@ module.exports = {
       }
     ]
   },
-  // devtool: 'cheap-module-eval-source-map'
-  devtool: 'inline-source-map'
+  devtool: 'cheap-module-eval-source-map'
+  // devtool: 'inline-source-map'
 }

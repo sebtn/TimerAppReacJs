@@ -6,14 +6,14 @@ module.exports = (config) => {
 		browsers: ['Chrome'],
 		singleRun: true,
 		frameworks: ['mocha'],
-//		files: ['app/tests/**/*.test.js'],
-	//	preprocessors: {
-		//	'app/tests/**/*.test.js': ['webpack', 'sourcemap']
-		//},
-		files: ['app/tests/test_index.js'],
+		files: ['app/tests/**/*.test.js'],
 		preprocessors: {
-			'app/tests/test_index.js': ['webpack', 'sourcemap']
+			'app/tests/**/*.test.js': ['webpack', 'sourcemap']
 		},
+		// files: ['app/tests/test_index.js'],
+		// preprocessors: {
+		// 	'app/tests/test_index.js': ['webpack', 'sourcemap']
+		// },
 		reporters: ['mocha'],
 		client: {
 			mocha: {
