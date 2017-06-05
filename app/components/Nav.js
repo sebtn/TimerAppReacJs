@@ -5,7 +5,7 @@ import {IndexLink, Link} from 'react-router'
 const Nav = () => {
 	return (
 		<div className="nav-container">
-			<nav className="nav nav-pills flex-column flex-md-row justify-content-center">
+			<nav className="nav  flex-column flex-md-row justify-content-center">
 			<li className="nav-item">
 			  <IndexLink className="flex-md-fill text-md-center nav-link title disabled" to="/">Timer App build on ReactJs</IndexLink>
 			</li>

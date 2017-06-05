@@ -1,3 +1,19 @@
 .nav-container {
-	background-color: #333333
+	background-color: $nav-background;
+	min-height: 6em;
+	nav {
+	vertical-align: middle;
+	padding:2em 0 2em 0;
+	}
+	& .nav-item a.title {
+		margin-right:5em;
+		color: $nav-text-color;
+		font-size:1.25em;
+		min-width: 100%;
+	}
+	& .nav-item a.counter, a.timer, a.author {
+		font-size: 1em;
+		min-width: 100%;
+		margin: 0.25em 3em 0 3em;
+	}
 }
