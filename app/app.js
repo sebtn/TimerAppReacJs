@@ -6,7 +6,7 @@ import {Route, Router, IndexRoute, hashHistory, Link} from 'react-router'
 import Main from '././components/Main'
 import Counter from '././components/Counter'
 import Timer from '././components/Timer'
-import  './app.scss' 
+import  '././styles/app.scss' 
 
 'use strict'
 

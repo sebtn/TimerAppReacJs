@@ -13,6 +13,7 @@ export default class Main extends Component {
 		return (
 			<div className="">
 				<Nav></Nav>
+				<h1 className="className">Rendered in Main</h1>
 			</div>
 		)
 	}

@@ -9,15 +9,15 @@ const Nav = () => {
 			<li className="nav-item">
 			  <IndexLink className="flex-md-fill text-md-center nav-link title disabled" to="/">Timer App build on ReactJs</IndexLink>
 			</li>
-			  <li className="nav-item">
+		  <li className="nav-item">
 			  <IndexLink className="flex-md-fill text-md-center nav-link counter" to="/Counter">Counter</IndexLink>
-			  </li>
-			  <li className="nav-item">
-			  <IndexLink className="flex-md-fill text-md-center nav-link timer" to="/Timer">Timer</IndexLink>
-			  </li>
-			  <li className="nav-item">
+		  </li>
+		  <li className="nav-item">
+			  <Link className="flex-md-fill text-md-center nav-link timer" to="/Timer">Timer</Link>
+		  </li>
+		  <li className="nav-item">
 			  <IndexLink className="flex-md-fill text-md-center nav-link author" to="/">Author: Seb</IndexLink>
-			  </li>
+		  </li>
 			</nav>
 		</div>
 	)
