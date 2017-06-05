@@ -5,8 +5,8 @@ import Nav from './Nav'
 
 'use strict'
 export default class Main extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {}
 	}
 	render() {
@@ -14,6 +14,7 @@ export default class Main extends Component {
 			<div className="">
 				<Nav></Nav>
 				<h1 className="className">Rendered in Main</h1>
+				{this.props.children}
 			</div>
 		)
 	}

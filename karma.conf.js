@@ -1,7 +1,7 @@
 let webpackConfig = require('./webpack.config.js')
 
 'use strict'
-module.exports = function (config)  {
+module.exports = (config) => {
 	config.set({
 		browsers: ['Chrome'],
 		singleRun: true,

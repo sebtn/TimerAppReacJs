@@ -13,9 +13,9 @@ import  '././styles/app.scss'
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main} >
-			<Route path="Counter" component={Counter} />
-			<Route path="Timer" component={Timer} />
-			<IndexRoute></IndexRoute>
+			<Route path="counter" component={Counter} />
+			{/*IndexRoute is for default route, when nothing is selected*/}
+			<IndexRoute component={Timer} />
 		</Route>		
 	</Router>,
 	document.getElementById('root')
