@@ -1,1 +1,11 @@
-@import "../node_modules/bootstrap/scss/bootstrap"
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.nav-container {
+	background-color: #555;
+	min-height: 70px;
+	padding-top: 15px;
+	font-size:18px;
+	& nav {
+		
+	}
+}
