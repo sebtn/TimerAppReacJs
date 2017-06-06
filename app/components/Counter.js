@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-
+import Clock from './Clock'
 
 'use strict'
 export default class Counter extends Component {
@@ -11,7 +11,7 @@ export default class Counter extends Component {
 	render() {
 		return (
 			<div className="count-container">
-				<h1>Rendered in count</h1>
+				<Clock totalSeconds={125}></Clock>
 			</div>
 		)
 	}
