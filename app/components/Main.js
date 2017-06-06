@@ -11,10 +11,15 @@ export default class Main extends Component {
 	}
 	render() {
 		return (
-			<div className="">
-				<Nav></Nav>
-				<h1 className="className">Rendered in Main</h1>
-				{this.props.children}
+			<div className="main-container">
+				<Nav />
+				<div className="row">
+					<div className="col-sm-3 col-md-6 col-lg-4" />
+					<div className="col-sm-6 col-md-6 col-lg-4 text-center">
+						{this.props.children}
+					</div>
+					<div className="col-sm-3 col-md-6 col-lg-4" />
+				</div>
 			</div>
 		)
 	}

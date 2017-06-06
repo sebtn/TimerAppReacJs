@@ -9,12 +9,12 @@
 	& .nav-item a.title {
 		margin-right:5em;
 		color: $nav-text-color;
-		font-size:1.75rem;
+		font-size:1.5rem;
 		min-width: 100%;
 	}
 	& .nav-item a.counter, a.timer, a.author {
-		font-size: 1.25rem;
+		font-size: 1.0rem;
 		min-width: 100%;
-		margin: 0.25em 3em 0 3em;
+		margin: 0.5em 3em 0 3em;
 	}
 }
