@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import expect from 'expect'
+import $ from 'jquery'
+
 // import Clock from '/home/seb/Sites/timerApp/app/components/Clock.js'
 // import Clock from '../../../app/components/Clock.js' 
 import Clock from '../../components/Clock.js' 
-import $ from 'jquery'
 
 'use strict'
 const TestUtils  = require('react-addons-test-utils')
@@ -16,7 +17,7 @@ describe('Clock, methods and render', () => {
 		expect(Clock).toExist()
 	})
 
-	it('Test clock #2: formatSeconds method should format time', () => {
+	it('Test Clock #2: formatSeconds method should format time', () => {
 		/*Render a React element into a detached DOM*/
 		let clock = TestUtils.renderIntoDocument(<Clock />)
 		let seconds = 615
@@ -26,7 +27,7 @@ describe('Clock, methods and render', () => {
 		expect(actual).toBe(expected)
 	})
 
-	it('Test #3: formatSeconds method should format number under 10' , () => {
+	it('Test Clock #3: formatSeconds method should format number under 10' , () => {
 		/*Render a React element into a detached DOM*/
 		let clock = TestUtils.renderIntoDocument(<Clock />)
 		let seconds = 61
@@ -36,7 +37,7 @@ describe('Clock, methods and render', () => {
 		expect(actual).toBe(expected)
 	})
 
-	it('Test #4: Should render clock to output ', () => {
+	it('Test Clock #4: Clock component should render clock to output ', () => {
 		/*Render a React element into a detached DOM*/
 		let clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>)
 		let el = $(ReactDOM.findDOMNode(clock))
