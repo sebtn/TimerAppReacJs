@@ -10,7 +10,7 @@ export default class Counter extends Component {
 	}
 	render() {
 		return (
-			<div className="count-container">
+			<div >
 				<Clock totalSeconds={125}></Clock>
 			</div>
 		)

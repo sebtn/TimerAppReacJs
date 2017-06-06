@@ -1,0 +1,18 @@
+.clock-container {
+	align-items: center;
+	background-color:$clock-bg-color;
+	border:2.5px solid $clock-border-color;
+	border-radius: 50%;
+	display:flex;
+	height:15rem;
+	justify-content: center;
+	margin: 4rem auto;
+	width: 15rem;
+
+	& span.clock-text {
+		color: $clock-text-color;
+		font-size: 2.5rem;
+		font-weight:300;
+	}
+
+}

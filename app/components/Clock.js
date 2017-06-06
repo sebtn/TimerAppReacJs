@@ -22,7 +22,7 @@ export default class Clock extends Component {
 		let {totalSeconds} = this.props
 		return (
 			<div className="clock-container">
-				<span className="clock-text">
+				<span ref="clockText" className="clock-text">
 					{this.formatSeconds(totalSeconds)}
 				</span>
 			</div>			
