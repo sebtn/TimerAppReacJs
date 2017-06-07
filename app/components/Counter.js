@@ -75,7 +75,7 @@ export default class Counter extends Component {
 	render() {
 		let {count} = this.state		
 		return ( 
-			<div >
+			<div className="counter-container">
 				<h1 className="page-title">Countdown App</h1>
 				<Clock totalSeconds={count}></Clock>
 				{this.renderControlArea()}		

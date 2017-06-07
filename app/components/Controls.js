@@ -22,7 +22,7 @@ export default class Controls extends Component {
 			return <button className="btn btn-secondary btn-lg" 
 			onClick={this.onStatusChange('paused')}>Pause</button>
 
-		} else if (countDownStatus == 'paused') {
+		} else  {
 			return <button className="btn btn-success btn-lg" 
 			onClick={this.onStatusChange('started')}>Start</button>
 		}

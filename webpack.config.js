@@ -19,6 +19,8 @@ module.exports = {
       Counter: 'app/components/Counter.js',
       Clock: 'app/components/Clock.js',
       CountDownForm: 'app/components/CountDownForm.js',
+      Controls: 'app/components/Controls.js',
+      TimerControl: 'app/components/TimerControl.js',
     }
   },
   module: {
