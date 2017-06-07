@@ -3,21 +3,35 @@ let webpackConfig = require('./webpack.config.js')
 'use strict'
 module.exports = (config) => {
 	config.set({
-		browsers: ['Chrome'],
+		// browsers: ['Chrome'],
+		browsers: ['ChromeNoSandboxHeadless'],
+		customLaunchers: {
+		  ChromeNoSandboxHeadless: {
+		    base: 'Chrome',
+		    flags: [
+		      '--no-sandbox',
+		      // See https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
+		      '--headless',
+		      '--disable-gpu',
+		      // Without a remote debugging port, Google Chrome exits immediately.
+		      ' --remote-debugging-port=9222',
+		    ],
+		  },
+		},
 		singleRun: true,
 		frameworks: ['mocha'],
-		files: ['app/tests/**/*.test.js'],
-		preprocessors: {
-			'app/tests/**/*.test.js': ['webpack', 'sourcemap']
-		},
-		// files: ['app/tests/test_index.js'],
+		// files: ['app/tests/**/*.test.js'],
 		// preprocessors: {
-		// 	'app/tests/test_index.js': ['webpack', 'sourcemap']
+		// 	'app/tests/**/*.test.js': ['webpack', 'sourcemap']
 		// },
+		files: ['app/tests/components/test_index.js'],
+		preprocessors: {
+			'app/tests/components/test_index.js': ['webpack']
+		},
 		reporters: ['mocha'],
 		client: {
 			mocha: {
-				timeout: '6500'
+				timeout: '5000'
 			}
 		},
 		webpack: webpackConfig,
