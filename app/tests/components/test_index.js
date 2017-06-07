@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import expect from 'expect'
 import $ from 'jquery'
 
-/*Import Components*/
+/*Import Components for testing*/
 import Clock from '../../components/Clock.js' 
 import Counter from '../../components/Counter.js' 
 import CountDownForm from '../../components/CountDownForm.js' 

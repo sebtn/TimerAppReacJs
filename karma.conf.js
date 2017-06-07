@@ -19,7 +19,8 @@ module.exports = (config) => {
 		    ],
 		  },
 		},
-		singleRun: true,
+		singleRun: false,
+		autoWatch: true,
 		frameworks: ['mocha'],
 		// files: ['app/tests/**/*.test.js'],
 		// preprocessors: {
