@@ -86,6 +86,34 @@ describe('Counter Component Testing', () => {
 			}, 3000 ) 
 		})
 
+		/*done as arg lets mocha run a-sync test*/
+		it('Test Counter #4: should pause on paused status ', (done) => {
+			let counter = TestUtils.renderIntoDocument(<Counter />)
+			counter.handleSetCountDown(3)
+			counter.handelSatusChange('paused')
+			/*after a second it should remain paused and 
+			count is still the same 3 */
+			setTimeout( () => {
+				expect(counter.state.count).toBe(3)
+				expect(counter.state.countDownStatus).toBe('paused')
+				done()
+			}, 1001)
+		})
+
+		/*done as arg lets mocha run a-sync test*/
+		it('Test Counter #5: should stop on stopped status ', (done) => {
+			let counter = TestUtils.renderIntoDocument(<Counter />)
+			counter.handleSetCountDown(3)
+			counter.handelSatusChange('stopped')
+			/*after a second it should remain stopped and 
+			count is now zero */
+			setTimeout( () => {
+				expect(counter.state.count).toBe(0)
+				expect(counter.state.countDownStatus).toBe('stopped')
+				done()
+			}, 1001)
+		})
+
 })
 
 /*------------Count down form Component testing---------------------*/

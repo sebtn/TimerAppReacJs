@@ -7,6 +7,7 @@ import Controls from './Controls'
 
 'use strict'
 export default class Counter extends Component {
+/*Counter is stateFull so use constructor object*/
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -75,6 +76,7 @@ export default class Counter extends Component {
 		let {count} = this.state		
 		return ( 
 			<div >
+				<h1 className="page-title">Countdown App</h1>
 				<Clock totalSeconds={count}></Clock>
 				{this.renderControlArea()}		
 			</div>
