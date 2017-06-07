@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import Clock from './Clock'
 import CountDownForm from './CountDownForm'
+import Controls from './Controls'
 
 'use strict'
 export default class Counter extends Component {
@@ -30,6 +31,12 @@ export default class Counter extends Component {
 				case 'started':
 					this.startTimer()
 					break
+				case 'stopped':
+					this.setState({count: 0})
+				case 'paused':
+					clearInterval(this.timer)
+					this.timer = undefined
+					break
 			}
 		}
 	}  
@@ -39,13 +46,31 @@ export default class Counter extends Component {
 		this.setState({count: seconds, countDownStatus: 'started'})
 	}
 
+
+/*-------------------------------------------------------*/
+	handelSatusChange = (newStatus) => {
+		this.setState({countDownStatus: newStatus})
+	}
+
+/*-------------------------------------------------------*/
+	renderControlArea = () => {
+		let {count, countDownStatus} = this.state		
+
+		if(countDownStatus !== 'stopped') {
+			return <Controls countDownStatus={countDownStatus} 
+			onStatusChange={this.handelSatusChange} />
+		} else {
+			return <CountDownForm onSetCountDown={this.handleSetCountDown} />		
+		}
+	}
+
 /*-------------------------------------------------------*/
 	render() {
-		let {count} = this.state
+		let {count} = this.state		
 		return ( 
 			<div >
 				<Clock totalSeconds={count}></Clock>
-				<CountDownForm onSetCountDown={this.handleSetCountDown}></CountDownForm>				
+				{this.renderControlArea()}		
 			</div>
 		)
 	}
