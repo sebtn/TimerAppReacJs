@@ -19,7 +19,8 @@
 │   │       ├── _controls.scss
 │   │       ├── _countDownForm.scss
 │   │       ├── _nav.scss
-│   │       └── _pageTitle.scss
+│   │       ├── _pageTitle.scss
+│   │       └── _timer.scss
 │   └── tests
 │       └── components
 │           ├── app.test.js
@@ -27,7 +28,8 @@
 │           ├── Controls.test.js
 │           ├── CountDownForm.test.js
 │           ├── Counter.test.js
-│           └── test_index.js
+│           ├── test_index.js
+│           └── timer.test.js
 ├── karma.conf.js
 ├── package.json
 ├── public
@@ -38,4 +40,4 @@
 ├── tree.txt
 └── webpack.config.js
 
-8 directories, 30 files
+8 directories, 32 files
