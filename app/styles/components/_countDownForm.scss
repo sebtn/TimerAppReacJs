@@ -1,38 +1,38 @@
 .countdown-form-container {
 	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-	    color:    #d5d5d5;
+	    color: $placeholder-letter;
 	}
 	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	   color:    #d5d5d5;
+	   color: $placeholder-letter;
 	   opacity:  1;
 	}
 	::-moz-placeholder { /* Mozilla Firefox 19+ */
-	   color:    #d5d5d5;
+	   color: $placeholder-letter;
 	   opacity:  1;
 	}
 	:-ms-input-placeholder { /* Internet Explorer 10-11 */
-	   color:    #d5d5d5;
+	   color: $placeholder-letter;
 	}
 	::-ms-input-placeholder { /* Microsoft Edge */
-	   color:    #d5d5d5;
+	   color: $placeholder-letter;
 	}
 
 	& .form-control {
 		outline: none;
-		-webkit-box-shadow: 0 4px 6px -6px #222;
-		-moz-box-shadow: 0 4px 6px -6px #222;
-		box-shadow: 0 4px 6px -6px #222;
+		-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
+		-moz-box-shadow: 0 4px 6px -6px $box-shadow-border;
+		box-shadow: 0 4px 6px -6px $box-shadow-border;
 		border: 0;
-		border-bottom: 1px solid #F5F5F5;
+		border-bottom: 1px solid $placeholder-letter;
 		min-height: 2.75rem;
 		font-size: 1.5rem;
 		& focus {
 			outline: none;
-			-webkit-box-shadow: 0 4px 6px -6px #222;
-			-moz-box-shadow: 0 4px 6px -6px #222;
-			box-shadow: 0 4px 6px -6px #222;
+			-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
+			-moz-box-shadow: 0 4px 6px -6px $box-shadow-border;
+			box-shadow: 0 4px 6px -6px $box-shadow-border;
 			border: 0;
-			border-bottom: 1px solid #F5F5F5;
+			border-bottom: 1px solid $placeholder-letter;
 			}
 		}		
 

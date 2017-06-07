@@ -8,7 +8,7 @@ import CountDownForm from '../../components/CountDownForm.js'
 'use strict'
 const TestUtils  = require('react-addons-test-utils')
 
-describe('Count Down Form Testing', () => {
+describe('Count Down Form Component Testing', () => {
 	
 	it('Test Count Down #1: Count Down Form should exist', () => {
 		expect(CountDownForm).toExist()
@@ -21,7 +21,7 @@ describe('Count Down Form Testing', () => {
 		let el = $(ReactDOM.findDOMNode(countdownform))
 
 		countdownform.refs.seconds.value = '125'
-		/*First dom node of form*/
+		/*First dom node of form, simulate a submit*/
 		TestUtils.Simulate.submit(el.find('form')[0])
 
 		expect(spy).toHaveBeenCalledWith(125)

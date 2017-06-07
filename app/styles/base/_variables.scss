@@ -58,6 +58,8 @@ $nav-text-color: $white;
 $clock-text-color: $white;
 $clock-bg-color:$l-blue;
 $clock-border-color: $d-blue;
+$box-shadow-border: #222;
+$placeholder-letter: #F5F5F5;
 
 
 @mixin _assert-ascending($map, $map-name) {
