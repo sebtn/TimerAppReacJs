@@ -46,7 +46,6 @@ export default class Counter extends Component {
 		this.setState({count: seconds, countDownStatus: 'started'})
 	}
 
-
 /*-------------------------------------------------------*/
 	handelSatusChange = (newStatus) => {
 		this.setState({countDownStatus: newStatus})

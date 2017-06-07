@@ -15,6 +15,7 @@ module.exports = (config) => {
 		      '--disable-gpu',
 		      // Without a remote debugging port, Google Chrome exits immediately.
 		      ' --remote-debugging-port=9222',
+		      '--disable-web-security',
 		    ],
 		  },
 		},
@@ -26,7 +27,7 @@ module.exports = (config) => {
 		// },
 		files: ['app/tests/components/test_index.js'],
 		preprocessors: {
-			'app/tests/components/test_index.js': ['webpack']
+			'app/tests/components/test_index.js': ['webpack', 'sourcemap']
 		},
 		reporters: ['mocha'],
 		client: {
