@@ -27,6 +27,7 @@ export default class Timer extends Component {
 
 /*-------------------------------------------------------*/
 	componentDidUpdate = (prevPorps, prevState) => {
+		/*Used when something is changed in the component*/
 		if(this.state.timerStatus !== prevState.timerStatus) {
 			switch(this.state.timerStatus) {
 				case 'started':
@@ -42,21 +43,10 @@ export default class Timer extends Component {
 		}
 	}  
 
-
 /*-------------------------------------------------------*/
 	handleStatusChange = (newStatus) => {
 		this.setState({timerStatus: newStatus})
-		console.log(newStatus)
 	}
-
-/*-------------------------------------------------------*/
-	renderControls = () => {
-		let {count, timerStatus} = this.props
-
-			// return <TimerControl timerStatus={timerStatus}
-			// onStatusChange={this.handleStatusChange} ></TimerControl>
-
-	}		
 
 /*-------------------------------------------------------*/
 	render() {
@@ -71,5 +61,4 @@ export default class Timer extends Component {
 			</div>			
 		)
 	}
-
 } 
