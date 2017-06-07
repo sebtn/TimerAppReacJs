@@ -3,6 +3,7 @@
 │   ├── app.js
 │   ├── components
 │   │   ├── Clock.js
+│   │   ├── Controls.js
 │   │   ├── CountDownForm.js
 │   │   ├── Counter.js
 │   │   ├── Main.js
@@ -21,7 +22,8 @@
 │       └── components
 │           ├── app.test.js
 │           ├── Clock.test.js
-│           ├── countDownForm.test.js
+│           ├── Controls.test.js
+│           ├── CountDownForm.test.js
 │           ├── Counter.test.js
 │           └── test_index.js
 ├── karma.conf.js
@@ -34,4 +36,4 @@
 ├── tree.txt
 └── webpack.config.js
 
-8 directories, 26 files
+8 directories, 28 files
