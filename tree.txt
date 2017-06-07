@@ -18,10 +18,12 @@
 │   │       ├── _countDownForm.scss
 │   │       └── _nav.scss
 │   └── tests
-│       ├── app.test.js
 │       └── components
+│           ├── app.test.js
 │           ├── Clock.test.js
-│           └── countDownForm.test.js
+│           ├── countDownForm.test.js
+│           ├── Counter.test.js
+│           └── test_index.js
 ├── karma.conf.js
 ├── package.json
 ├── public
@@ -32,4 +34,4 @@
 ├── tree.txt
 └── webpack.config.js
 
-8 directories, 24 files
+8 directories, 26 files
