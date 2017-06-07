@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom'
 import expect from 'expect'
 import $ from 'jquery'
 
+/*Import Components*/
 import Clock from '../../components/Clock.js' 
 import Counter from '../../components/Counter.js' 
 import CountDownForm from '../../components/CountDownForm.js' 
+import Controls from '../../components/Controls.js' 
+
 
 
 'use strict'
@@ -15,7 +18,9 @@ let testsContext = require.context(".", true, /_test$/)
 testsContext.keys().forEach(testsContext)
 const TestUtils  = require('react-addons-test-utils')
 
-/*Begin testing*/
+/*--------------------------------------------------
+------------  TEST FOR COMPONENETS   ---------------
+---------------------------------------------------*/
 describe('TestApp #1: Test App is testable', () => {
 
 	it('Test App #1: it should properly run tests', () => {
@@ -23,7 +28,32 @@ describe('TestApp #1: Test App is testable', () => {
 	})
 
 })
+/*-----------------Controls Component  Testing-----------------------*/
+describe('Controls Component Testing', () => {
 
+	it('Test Controls #1: Controls component should exist', ()=> {
+		expect(Controls).toExist()
+	})
+
+	it('Test Controls #2: Controls component should render paused when started', ()=> {
+		let controls = TestUtils.renderIntoDocument(<Controls countDownStatus='started' />)
+		let el = $(ReactDOM.findDOMNode(controls))
+		let pauseButton = el.find('button:contains(Pause)')
+
+		expect(pauseButton.length).toBe(1)
+	})
+
+	it('Test Controls #3: Controls component should render started when paused', ()=> {
+		let controls = TestUtils.renderIntoDocument(<Controls countDownStatus='paused'/>)
+		let el = $(ReactDOM.findDOMNode(controls))
+		let startButton = el.find('button:contains(Start)')
+
+		expect( startButton.length).toBe(1)
+	})
+
+})
+
+/*-------------Counter Component Testing-----------------------------*/
 describe('Counter Component Testing', () => {
 
 	it('Test Counter #1: Counter component should exist', () => {
@@ -58,6 +88,7 @@ describe('Counter Component Testing', () => {
 
 })
 
+/*------------Count down form Component testing---------------------*/
 describe('Count Down Form Component Testing', () => {
 	
 	it('Test Count Down #1: Count Down Form should exist', () => {
@@ -91,6 +122,8 @@ describe('Count Down Form Component Testing', () => {
 	})
 
 })
+
+/*-------------Testing Clock component------------------------------*/
 /*Test Clock component behavior*/
 describe('Clock, methods and render', () => {
 
